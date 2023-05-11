@@ -44,36 +44,42 @@ let js = "amazing";
 //  const averageAge = (bebaAge + bettAge) / 2;
 //  console.log(averageAge)
 
-const MarkWeight = 65;
-const MarkHeight = 1.70;
-const johnWeight = 90;
-const johnHeight = 1.75;
+// const MarkWeight = 65;
+// const MarkHeight = 1.70;
+// const johnWeight = 90;
+// const johnHeight = 1.75;
 
-const BMImark = (MarkWeight)/ MarkHeight ** MarkHeight;
-const BMIjohn = (johnWeight)/ johnHeight ** johnHeight;
+// const BMImark = (MarkWeight)/ MarkHeight ** MarkHeight;
+// const BMIjohn = (johnWeight)/ johnHeight ** johnHeight;
 
-console.log(BMIjohn)
-console.log(BMImark)
+// console.log(BMIjohn)
+// console.log(BMImark)
 
-const markHigherBMI = true;
+// const markHigherBMI = true;
 
-if(BMIjohn > BMImark)
-  console.log(!markHigherBMI)
-else 
- console.log(markHigherBMI)
+// if(BMIjohn > BMImark)
+//   console.log(!markHigherBMI)
+// else 
+//  console.log(markHigherBMI)
 
 
- const myName = " Anteneh Alem ";
- const job = " fullStack developer ";
- const currentLocation = " Newzealand "
- const Antish = ` I'm ${myName}, i work as a ${job} in a amazon and i live in ${currentLocation}.`
- console.log(Antish)
+//  const myName = " Anteneh Alem ";
+//  const job = " fullStack developer ";
+//  const currentLocation = " Newzealand "
+//  const Antish = ` I'm ${myName}, i work as a ${job} in a amazon and i live in ${currentLocation}.`
+//  console.log(Antish)
 
- const currentAge = 10;
- const oldEnough = 18;
- const waitYear = oldEnough - currentAge;
- if(currentAge > oldEnough){
-    console.log(`your age is ${currentAge} and it is above the requirment so you are actually permitted to drive.`)
- }else if(currentAge < oldEnough){
-    console.log(`your age is ${currentAge} and it is below the requirment so you have to wait ${waitYear} year inorder to drive sorry.  `)
- }
+//  const currentAge = 10;
+//  const oldEnough = 18;
+//  const waitYear = oldEnough - currentAge;
+//  if(currentAge > oldEnough){
+//     console.log(`your age is ${currentAge} and it is above the requirment so you are actually permitted to drive.`)
+//  }else if(currentAge < oldEnough){
+//     console.log(`your age is ${currentAge} and it is below the requirment so you have to wait ${waitYear} year inorder to drive sorry.  `)
+//  }
+
+
+// const inputyear = '1991';
+
+// console.log(Number(inputyear))
+// console.log(Number(inputyear) + 23)
