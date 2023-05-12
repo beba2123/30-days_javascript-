@@ -48,5 +48,19 @@ anteneh`)
 ==>> coehersion --> happens during the  operator of diffrent values what is means that when we want to add string and number together. eg -> console.log('i am' + 20 + ' years old '). 20 is number and the rest of is string. console.log('23' - '43') output 20 becouse (-)minus sign triger that they act like number. console.log('23' / '2') 11.5.. but when there is (+) it triggers concatenation like console.log('23' + '42' + 1)  output ==>> 23421
 
 
+===>>> truthy and falsy value
+==>> falsy value are value which has null, undefined, 0, NaN value in a boolean.
+eg. const money = 0; let money;(becouse it is empty value means it is undefined)
+==>> truthy value are value that are exclude four of the falsy value.
+
+===>>> diffrence between ==(Loose equality) & ===(strict equality)
+
+both of them we use it for comparison but the main diffrence between them is strict equalty isnot  support the type  coersion and loose one support it so for these reason when we use the loose  one
+we face so many bugs so for that reason mostly it suggest to use the strict one(===) inorder  to reduce  bugs.
+
+===>>> boolean operator(AND, OR, and NOT) 
+in  AND both of them must be true inorder to make the statment true. 
+in OR if one them is true it make the statment true.
+NOT  is used to convert the operator example like true -> false or false -> true.
 
 

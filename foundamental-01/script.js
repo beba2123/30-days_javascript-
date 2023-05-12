@@ -83,3 +83,20 @@ let js = "amazing";
 
 // console.log(Number(inputyear))
 // console.log(Number(inputyear) + 23)
+// let money=10;
+
+// if(money){
+//  console.log("don't waste it..")
+// }else {
+//  console.log(" you  have to work-hard")
+// }
+const hasGoodVision = true;
+const goodSkill = false;
+
+const shouldDrive = hasGoodVision || goodSkill;
+
+if(shouldDrive){
+    console.log(" betty has  good skill. ")
+}else {
+    console.log(" betty don't have good skill. ")
+}
