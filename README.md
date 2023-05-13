@@ -64,3 +64,44 @@ in OR if one them is true it make the statment true.
 NOT  is used to convert the operator example like true -> false or false -> true.
 
 
+===>>> Switch 
+one  of the javascript condition statements, which are  used to perform diffrent task or action based on diffrent condtion. example we want to do diffrent task on each day on a week so for this purpose we use Switch statment. 
+
+// const Day = 'Saturday';  ==>> we assign the day we want to print then  
+
+// switch(Day){  ==> we accept that argument and search it on each case inside the argument.
+//    case 'monday':
+//       console.log(" go to addiss.. ")
+//       break;
+//     case 'tuesday':
+//        console.log(" watching Champions League.. ")
+//        break;
+//     case 'wednesday':
+//         console.log(" playing game.. ")
+//         break;
+//     case 'Thurday':
+//         console.log(" watching european League ")
+//         break;
+//     case 'Friday':
+//         console.log(" watching serious movie.. ")
+//         break;
+//     case 'Saturday':
+//         console.log(" watching premier league . ")
+//         break;
+//     case'Sunday':
+//         console.log(" Go out with my friends .. ")
+//         break;
+//     default:
+//         console.log("NOT") ==> if our input isnot listed on the list we set default.
+// }
+
+===>>> Statment and Expression 
+-->> Statment is a group of expression that we design to carry out certain action.statment are two sided either they do the task or don't do it. any statment that can return value is automatically qualified to be used as an expression. thats why we called function and class as a  statment.
+
+--> Expression is any word or group of  word or symbols that gives value. example 2,3,4,5,const,let.. 
+
+===>>> conditional operator (terinary operator)
+--> it is like an expression which has three parts ->condition , if part and the else.
+                      const age = 23;
+	condtion part <--age >= 23 ? ' I like to drink wine.. ' if part.. : ' I like to drink water.. '  else part...
+==>> we  use ternary oprator for immidiate condition(it is not favourable if we use it for more than two conditions.. ) means that for big block of code it is better to  use if block.
