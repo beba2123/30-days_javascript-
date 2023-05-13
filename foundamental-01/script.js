@@ -90,36 +90,65 @@ let js = "amazing";
 // }else {
 //  console.log(" you  have to work-hard")
 // }
-const hasGoodVision = true;
-const goodSkill = false;
+// const hasGoodVision = true;
+// const goodSkill = false;
 
-const shouldDrive = hasGoodVision || goodSkill;
+// const shouldDrive = hasGoodVision || goodSkill;
 
-if(shouldDrive){
-    console.log(" betty has  good skill. ")
-}else {
-    console.log(" betty don't have good skill. ")
+// if(shouldDrive){
+//     console.log(" betty has  good skill. ")
+// }else {
+//     console.log(" betty don't have good skill. ")
+// }
+
+// const DolphinescoreOne = 96;
+// const DolphinescoreTwo = 108;
+// const DolphinescoreThree = 89;
+
+// const DolphinesAverageValue = (DolphinescoreOne + DolphinescoreTwo + DolphinescoreThree)/3;
+//  console.log(" the average score of Dolphines is " + DolphinesAverageValue);
+
+//  const KoalasScoreOne = 88;
+//  const KoalasScoreTwo = 91;
+//  const KoalasScoreThree =  123;
+
+//  const KoalasAverageValue = (KoalasScoreOne + KoalasScoreTwo + KoalasScoreThree)/3;
+//  console.log(" the average score of Koalas is " + KoalasAverageValue)
+
+
+//  if(DolphinesAverageValue > KoalasAverageValue){
+//          console.log(" Dolphines are the winners of the tournament.. ");
+//  }else if(KoalasAverageValue > DolphinesAverageValue){
+//     console.log(" Koalas are the winner of the tournament... ")
+//  }else if(KoalasAverageValue == DolphinesAverageValue){
+//     console.log(" The game ends with tie..so there will be another game..oops... ")
+//  }
+
+
+const Day = 'Saturday';
+
+switch(Day){
+   case 'monday':
+      console.log(" go to addiss.. ")
+      break;
+    case 'tuesday':
+       console.log(" watching Champions League.. ")
+       break;
+    case 'wednesday':
+        console.log(" playing game.. ")
+        break;
+    case 'Thurday':
+        console.log(" watching european League ")
+        break;
+    case 'Friday':
+        console.log(" watching serious movie.. ")
+        break;
+    case 'Saturday':
+        console.log(" watching premier league . ")
+        break;
+    case'Sunday':
+        console.log(" Go out with my friends .. ")
+        break;
+    default:
+        console.log("NOT")
 }
-
-const DolphinescoreOne = 96;
-const DolphinescoreTwo = 108;
-const DolphinescoreThree = 89;
-
-const DolphinesAverageValue = (DolphinescoreOne + DolphinescoreTwo + DolphinescoreThree)/3;
- console.log(" the average score of Dolphines is " + DolphinesAverageValue);
-
- const KoalasScoreOne = 88;
- const KoalasScoreTwo = 91;
- const KoalasScoreThree =  123;
-
- const KoalasAverageValue = (KoalasScoreOne + KoalasScoreTwo + KoalasScoreThree)/3;
- console.log(" the average score of Koalas is " + KoalasAverageValue)
-
-
- if(DolphinesAverageValue > KoalasAverageValue){
-         console.log(" Dolphines are the winners of the tournament.. ");
- }else if(KoalasAverageValue > DolphinesAverageValue){
-    console.log(" Koalas are the winner of the tournament... ")
- }else if(KoalasAverageValue == DolphinesAverageValue){
-    console.log(" The game ends with tie..so there will be another game..oops... ")
- }
