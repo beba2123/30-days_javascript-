@@ -100,3 +100,26 @@ if(shouldDrive){
 }else {
     console.log(" betty don't have good skill. ")
 }
+
+const DolphinescoreOne = 96;
+const DolphinescoreTwo = 108;
+const DolphinescoreThree = 89;
+
+const DolphinesAverageValue = (DolphinescoreOne + DolphinescoreTwo + DolphinescoreThree)/3;
+ console.log(" the average score of Dolphines is " + DolphinesAverageValue);
+
+ const KoalasScoreOne = 88;
+ const KoalasScoreTwo = 91;
+ const KoalasScoreThree =  123;
+
+ const KoalasAverageValue = (KoalasScoreOne + KoalasScoreTwo + KoalasScoreThree)/3;
+ console.log(" the average score of Koalas is " + KoalasAverageValue)
+
+
+ if(DolphinesAverageValue > KoalasAverageValue){
+         console.log(" Dolphines are the winners of the tournament.. ");
+ }else if(KoalasAverageValue > DolphinesAverageValue){
+    console.log(" Koalas are the winner of the tournament... ")
+ }else if(KoalasAverageValue == DolphinesAverageValue){
+    console.log(" The game ends with tie..so there will be another game..oops... ")
+ }
