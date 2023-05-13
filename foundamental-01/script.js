@@ -125,30 +125,43 @@ let js = "amazing";
 //  }
 
 
-const Day = 'Saturday';
+// const Day = 'Saturday';
 
-switch(Day){
-   case 'monday':
-      console.log(" go to addiss.. ")
-      break;
-    case 'tuesday':
-       console.log(" watching Champions League.. ")
-       break;
-    case 'wednesday':
-        console.log(" playing game.. ")
-        break;
-    case 'Thurday':
-        console.log(" watching european League ")
-        break;
-    case 'Friday':
-        console.log(" watching serious movie.. ")
-        break;
-    case 'Saturday':
-        console.log(" watching premier league . ")
-        break;
-    case'Sunday':
-        console.log(" Go out with my friends .. ")
-        break;
-    default:
-        console.log("NOT")
-}
+// switch(Day){
+//    case 'monday':
+//       console.log(" go to addiss.. ")
+//       break;
+//     case 'tuesday':
+//        console.log(" watching Champions League.. ")
+//        break;
+//     case 'wednesday':
+//         console.log(" playing game.. ")
+//         break;
+//     case 'Thurday':
+//         console.log(" watching european League ")
+//         break;
+//     case 'Friday':
+//         console.log(" watching serious movie.. ")
+//         break;
+//     case 'Saturday':
+//         console.log(" watching premier league . ")
+//         break;
+//     case'Sunday':
+//         console.log(" Go out with my friends .. ")
+//         break;
+//     default:
+//         console.log("NOT")
+// }
+// const age = 23;
+// const GoTOParty = age >= 18  ? ' you can go to the party ' : ' you cannot go to the party '
+//   console.log(GoTOParty)  
+
+
+//   const bill = 450
+ 
+// const tip = bill >= 50 && bill <= 300 ? console.log('The amount of Tip you will got is ' + bill * 0.15 ) : console.log('The amount of Tip you will got is ' + bill * 0.2)
+
+// const tip = bill >= 50 && bill <= 300 ?   bill * 0.15 :  bill * 0.2;
+// console.log(`for ${bill} birr ${tip} 
+// and total value that you are going to pay is ${bill + tip} birr
+// so have nice meal.. `)
