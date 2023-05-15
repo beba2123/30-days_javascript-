@@ -74,7 +74,7 @@ console.log(DolphineScores, KoalaScores);
 // console.log(KoalaScores);
 const CheckWinner = (avgDolphins, avgKoalas) =>{
   if(avgDolphins > 2 * avgKoalas ){
-    console.log(`the winner of the tournament is Dolphines by getting the average value of ${avgDolphins}.. `)
+    console.log(`The winner of the tournament is Dolphines by getting the average value of ${avgDolphins}...`)
   }else if(avgKoalas > 2 * avgDolphins ){
     console.log(`The winner of the tournament is Koalas by getting the average value of ${avgKoalas}.. `)
   }else{
@@ -82,3 +82,6 @@ const CheckWinner = (avgDolphins, avgKoalas) =>{
   }
 }
 CheckWinner(DolphineScores, KoalaScores)
+
+const nameOfFriends = ['Abeba', 'Alem', 'Abera']
+console.log(nameOfFriends[0]) //for printing the index zero elements...
