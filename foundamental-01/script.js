@@ -162,6 +162,6 @@ let js = "amazing";
 // const tip = bill >= 50 && bill <= 300 ? console.log('The amount of Tip you will got is ' + bill * 0.15 ) : console.log('The amount of Tip you will got is ' + bill * 0.2)
 
 // const tip = bill >= 50 && bill <= 300 ?   bill * 0.15 :  bill * 0.2;
-// console.log(`for ${bill} birr ${tip} 
+// console.log(`for ${bill} birr ${tip})
 // and total value that you are going to pay is ${bill + tip} birr
 // so have nice meal.. `)
