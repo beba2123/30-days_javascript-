@@ -105,3 +105,55 @@ one  of the javascript condition statements, which are  used to perform diffrent
                       const age = 23;
 	condtion part <--age >= 23 ? ' I like to drink wine.. ' if part.. : ' I like to drink water.. '  else part...
 ==>> we  use ternary oprator for immidiate condition(it is not favourable if we use it for more than two conditions.. ) means that for big block of code it is better to  use if block.
+
+===>>> 'use strict' -->> we use the strict mode  inorder to secure our code in javascript which means that if there is an error or a bug on our code it simply show us  the error other wise the javascipt pass it silently. 
+===>>> function declaration and expression 
+==>>function declaration .
+we can declare a function using the  function keyword and function name of the funcion. 
+
+function keyword<--function CalcAge(birthYear){
+                   return 2025 - birthYear;
+                }
+==>> function expression.
+in javascript function is a value so inorder to store that value  we have to set or declare a variable for  it.
+const Age = function (birthYear){
+    return 2025 - birthYear;
+}
+const CalcAge = Age(1991)
+console.log(CalcAge);
+
+--->>the main diffrence between function declaration and expression 
+in function declaration we can call a function before it like this 
+  
+  const Age = CalcAge(birthyear)--> call the function before we are writng the function
+function keyword<--function CalcAge(birthYear){
+                   return 2025 - birthYear;
+                }
+
+-> but on function expression you cannot  call the function before it, you can call it only after.
+  const Age = function (birthYear){
+    return 2025 - birthYear;
+}
+const CalcAge = Age(1991) ==> we can call the function after it not before.
+console.log(CalcAge);
+
+===>>> Arrow function
+->it is one of the function which doesnot use function key inorder to write a bunch of code inside it.
+const CalcAge = birthyear => 2035 - birthYear; this for simple argument or for multiple argument we can use the below one.
+const retirmentleft = (birthYear, retirment) => {
+    const currentAge =  2035 - birthYear;
+    const yearsLeft =  retirment - currentAge;
+        return `the amount of time you left for retirment is ${yearsLeft} years so you better chillout`;
+}
+console.log(retirmentleft(1991, 65))
+
+===>>> Arrays 
+one the programming concept that is used for storing the data inside them, so the array concept is the basic concept for all the programmer.
+const nameOfFriends = ['Abeba', 'Alem', 'Abera']
+console.log(nameOfFriends[0]) //for printing the index zero elements...
+also for knowing the length of the array..console.log(nameOfFriends.length) and also for knowing the last value in the array conole.log(nameOfFriends[nameOfFriends.length - 1)]);
+-->we can change a data inside an array becouse array is mutable  and it is not primitive type what it means that any primitive types that is declared by 'const' we cannot change that but we can in an array becouse it isnot primitive type.
+eg. const nameOfFriends = ['Abeba', 'Alem', 'Abera'];
+    and we want to change on the values inside the array..
+    nameOfFriends[2] = abebech;
+	console.log(nameOfFriends) ==>>  ['Abeba', 'Alem', 'Abera'];

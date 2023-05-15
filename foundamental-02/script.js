@@ -85,3 +85,17 @@ CheckWinner(DolphineScores, KoalaScores)
 
 const nameOfFriends = ['Abeba', 'Alem', 'Abera']
 console.log(nameOfFriends[0]) //for printing the index zero elements...
+
+const CalcAge = function (birthYear) {
+   return 2037- birthYear;
+}
+const years = [1991, 1989, 2001];
+const age1 = CalcAge(years[0])
+const age2 = CalcAge(years[1])
+const age3 = CalcAge(years[2])
+
+console.log(age1, age2, age3)
+const ages = [CalcAge(years[0]), CalcAge(years[1]), CalcAge(years[2])]
+console.log(ages)
+
+
