@@ -104,25 +104,59 @@
 // }
 
 
-let tip;
-const Tips = function CalcTip(bills){
-  if(bills > 50 && bills < 300){
-    tip = 0.15 * bills;
-  }else{
-    tip = 0.2 * bills;
+// let tip;
+// const Tips = function CalcTip(bills){
+//   if(bills > 50 && bills < 300){
+//     tip = 0.15 * bills;
+//   }else{
+//     tip = 0.2 * bills;
+//   }
+//    return tip;
+// }
+
+// console.log(`amount of tip you will got is ${Tips(100)} dollar `);
+
+// const bills = [125, 555, 44];
+
+// const tips1 = Tips(bills[0]);
+// const tips2 = Tips(bills[1]);
+// const tips3 = Tips(bills[2]);
+
+// const TipsArray = [tips1, tips2, tips3];
+// console.log(TipsArray);
+// const Total = [(bills[0]+tips1), (bills[1]+tips2), (bills[2]+tips3)];
+// console.log(Total)
+// const PeronalProfile = {
+//   First_name : 'Anteneh',
+//   Age : 23,
+//   County : 'biftu county',
+//   Middle_name : 'Alem'
+// }
+// console.log(PeronalProfile)
+// console.log(PeronalProfile.First_name);  // we can call it using dot anotation
+// console.log(PeronalProfile.County);
+// console.log(PeronalProfile['First_name']);  //we can call it using this method also..
+
+
+const PeronalProfile = {
+  First_name : 'Anteneh',
+  orgnalAge : 25,
+  birthYear: 1999,
+  County : 'biftu county',
+  Middle_name : 'Alem',
+  DriverLicense: true,
+  CalcAge : function(){
+    this.age = 2022 - this.birthYear;
+    return this.age;
+  },
+  getsummarry : function() {
+    return `${PeronalProfile.First_name} is a ${PeronalProfile.age} years old teacher, and he has ${this.DriverLicense  ? 'a' : 'no'} driver License.`
   }
-   return tip;
 }
+console.log(PeronalProfile.CalcAge())
+console.log(PeronalProfile.age)
+console.log(PeronalProfile)
+console.log(PeronalProfile.getsummarry())
+// console.log(PeronalProfile['CalcAge'](1991))
 
-console.log(`amount of tip you will got is ${Tips(100)} dollar `);
 
-const bills = [125, 555, 44];
-
-const tips1 = Tips(bills[0]);
-const tips2 = Tips(bills[1]);
-const tips3 = Tips(bills[2]);
-
-const TipsArray = [tips1, tips2, tips3];
-console.log(TipsArray);
-const Total = [(bills[0]+tips1), (bills[1]+tips2), (bills[2]+tips3)];
-console.log(Total)
