@@ -63,39 +63,66 @@
 // }
 // console.log(FruitProcessor(4, 8))
 
-const CalcAverage = (score1, score2, score3) =>{
-     Average = (score1 + score2 +score3)/3;
-     return Average; 
-}
-const DolphineScores = CalcAverage(34,54,56);
-const KoalaScores = CalcAverage(96,99,97);
+// const CalcAverage = (score1, score2, score3) =>{
+//      Average = (score1 + score2 +score3)/3;
+//      return Average; 
+// }
+// const DolphineScores = CalcAverage(34,54,56);
+// const KoalaScores = CalcAverage(96,99,97);
 
-console.log(DolphineScores, KoalaScores);
-// console.log(KoalaScores);
-const CheckWinner = (avgDolphins, avgKoalas) =>{
-  if(avgDolphins > 2 * avgKoalas ){
-    console.log(`The winner of the tournament is Dolphines by getting the average value of ${avgDolphins}...`)
-  }else if(avgKoalas > 2 * avgDolphins ){
-    console.log(`The winner of the tournament is Koalas by getting the average value of ${avgKoalas}.. `)
+// console.log(DolphineScores, KoalaScores);
+// // console.log(KoalaScores);
+// const CheckWinner = (avgDolphins, avgKoalas) =>{
+//   if(avgDolphins > 2 * avgKoalas ){
+//     console.log(`The winner of the tournament is Dolphines by getting the average value of ${avgDolphins}...`)
+//   }else if(avgKoalas > 2 * avgDolphins ){
+//     console.log(`The winner of the tournament is Koalas by getting the average value of ${avgKoalas}.. `)
+//   }else{
+//     console.log(`the tournament ended by not getting the winner..so see you another time..`)
+//   }
+// }
+// CheckWinner(DolphineScores, KoalaScores)
+
+// const nameOfFriends = ['Abeba', 'Alem', 'Abera', 23]
+// console.log(nameOfFriends[0]) //for printing the index zero elements...
+
+// const CalcAge = function (birthYear) {
+//    return 2037- birthYear;
+// }
+// const years = [1991, 1989, 2001];
+// const age1 = CalcAge(years[0])
+// const age2 = CalcAge(years[1])
+// const age3 = CalcAge(years[2])
+
+// console.log(age1, age2, age3)
+// const ages = [CalcAge(years[0]), CalcAge(years[1]), CalcAge(years[2])]
+// console.log(ages)
+// if(nameOfFriends.includes(23)){
+//   console.log('you have a good friend called alem..')
+// }else {
+//   console.log('you do not have a friend called alemu..')
+// }
+
+
+let tip;
+const Tips = function CalcTip(bills){
+  if(bills > 50 && bills < 300){
+    tip = 0.15 * bills;
   }else{
-    console.log(`the tournament ended by not getting the winner..so see you another time..`)
+    tip = 0.2 * bills;
   }
+   return tip;
 }
-CheckWinner(DolphineScores, KoalaScores)
 
-const nameOfFriends = ['Abeba', 'Alem', 'Abera']
-console.log(nameOfFriends[0]) //for printing the index zero elements...
+console.log(`amount of tip you will got is ${Tips(100)} dollar `);
 
-const CalcAge = function (birthYear) {
-   return 2037- birthYear;
-}
-const years = [1991, 1989, 2001];
-const age1 = CalcAge(years[0])
-const age2 = CalcAge(years[1])
-const age3 = CalcAge(years[2])
+const bills = [125, 555, 44];
 
-console.log(age1, age2, age3)
-const ages = [CalcAge(years[0]), CalcAge(years[1]), CalcAge(years[2])]
-console.log(ages)
+const tips1 = Tips(bills[0]);
+const tips2 = Tips(bills[1]);
+const tips3 = Tips(bills[2]);
 
-
+const TipsArray = [tips1, tips2, tips3];
+console.log(TipsArray);
+const Total = [(bills[0]+tips1), (bills[1]+tips2), (bills[2]+tips3)];
+console.log(Total)
