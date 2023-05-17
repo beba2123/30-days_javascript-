@@ -158,5 +158,21 @@ console.log(PeronalProfile.age)
 console.log(PeronalProfile)
 console.log(PeronalProfile.getsummarry())
 // console.log(PeronalProfile['CalcAge'](1991))
-
+const MarksProfile = {
+  full_name: 'Mark Miller',
+  mass:78,
+  Height:1.69,
+  CaclBMI: function(){
+    return this.mass / (this.Height ** 2);
+  }
+}
+const JohnProfile = {
+  full_name : 'John Smith',
+  mass: 92,
+  Height:1.95,
+  CaclBMI: function(){
+    this.BMI  = this.mass / (this.Height ** 2);
+    return this.BMI;
+  }
+}
 
