@@ -202,3 +202,64 @@
 // }
 
 // console.log(types);
+
+// const bills = [125,  126, 450];
+// let sum =0;
+
+// for(let i=0; i<bills.length; i++){
+//   sum += bills[i];
+// }
+
+// console.log(sum)
+
+// const BirthYear = [1991, 2007, 1969, 2020];
+// const CurrentAge = [];
+// const CurrentYear = 2023;
+
+// for(let i=0; i< BirthYear.length; i++){
+//     let CalcAge = CurrentYear - BirthYear[i];
+//      CurrentAge.push(CalcAge)
+// }
+// console.log(CurrentAge)
+
+// const AntenehArray = [
+//   'Anteneh Alem',
+//   12899,
+//   'Texas-Houston',
+//   'java-programmer',
+// ]
+
+// for(let i=0; i<AntenehArray.length; i++){
+//   if(typeof AntenehArray[i] !== 'string') continue;
+//   console.log(AntenehArray[i]) 
+// }
+
+// for(let i=0; i<AntenehArray.length; i++){
+//   if(typeof AntenehArray[i] !== 'string') break;
+//   console.log(AntenehArray[i], typeof AntenehArray[i]) 
+// }
+
+// const AntenehArray = [
+//   'Anteneh Alem',
+//   12899,
+//   'Texas-Houston',
+//   'java-programmer',
+// ]
+
+// for(let i=AntenehArray.length -1; i>=0; i--){
+//   console.log(i , AntenehArray[i]);
+// }
+// const Exersice = [
+//   'chest day',
+//   'running day',
+//   'leg day',
+//   'hand muscle day',
+// ]
+
+// for(let i =1; i<=5; i++){
+//  console.log(`Exersice day ${i}`);
+//  for(let j=0; j<Exersice.length; j++){
+//      console.log(`${Exersice[j]}`)
+   
+//  }
+// }
