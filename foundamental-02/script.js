@@ -138,41 +138,67 @@
 // console.log(PeronalProfile['First_name']);  //we can call it using this method also..
 
 
-const PeronalProfile = {
-  First_name : 'Anteneh',
-  orgnalAge : 25,
-  birthYear: 1999,
-  County : 'biftu county',
-  Middle_name : 'Alem',
-  DriverLicense: true,
-  CalcAge : function(){
-    this.age = 2022 - this.birthYear;
-    return this.age;
-  },
-  getsummarry : function() {
-    return `${PeronalProfile.First_name} is a ${PeronalProfile.age} years old teacher, and he has ${this.DriverLicense  ? 'a' : 'no'} driver License.`
-  }
-}
-console.log(PeronalProfile.CalcAge())
-console.log(PeronalProfile.age)
-console.log(PeronalProfile)
-console.log(PeronalProfile.getsummarry())
+// const PeronalProfile = {
+//   First_name : 'Anteneh',
+//   orgnalAge : 25,
+//   birthYear: 1999,
+//   County : 'biftu county',
+//   Middle_name : 'Alem',
+//   DriverLicense: true,
+//   CalcAge : function(){
+//     this.age = 2022 - this.birthYear;
+//     return this.age;
+//   },
+//   getsummarry : function() {
+//     return `${PeronalProfile.First_name} is a ${PeronalProfile.age} years old teacher, and he has ${this.DriverLicense  ? 'a' : 'no'} driver License.`
+//   }
+// }
+// console.log(PeronalProfile.CalcAge())
+// console.log(PeronalProfile.age)
+// console.log(PeronalProfile)
+// console.log(PeronalProfile.getsummarry())
 // console.log(PeronalProfile['CalcAge'](1991))
-const MarksProfile = {
-  full_name: 'Mark Miller',
-  mass:78,
-  Height:1.69,
-  CaclBMI: function(){
-    return this.mass / (this.Height ** 2);
-  }
-}
-const JohnProfile = {
-  full_name : 'John Smith',
-  mass: 92,
-  Height:1.95,
-  CaclBMI: function(){
-    this.BMI  = this.mass / (this.Height ** 2);
-    return this.BMI;
-  }
-}
+// const MarksProfile = {
+//   full_name: 'Mark Miller',
+//   mass:78,
+//   Height:1.69,
+//   CaclBMI: function(){
+//     this.BMI = this.mass / (this.Height ** 2);
+//     return this.BMI;
+  
+//   }
+// }
+// const JohnProfile = {
+//   full_name : 'John Smith',
+//   mass: 92,
+//   Height:1.95,
+//   CaclBMI: function(){
+//     this.BMI  = this.mass / (this.Height ** 2);
+//     return this.BMI;
+//   }
+// }
+// const JohnCalcBMI = JohnProfile.CaclBMI();
+// const MarksCalcBMI = MarksProfile.CaclBMI();
+// console.log(JohnCalcBMI)
 
+// if(JohnCalcBMI > MarksCalcBMI){
+//   console.log(`${JohnProfile.full_name} BMI (${JohnCalcBMI}) is greater than ${MarksProfile.full_name} BMI (${MarksCalcBMI})`)
+// }else if(MarksCalcBMI > JohnCalcBMI){
+//   console.log(`${MarksProfile.full_name} BMI (${MarksCalcBMI}) is greater than ${JohnProfile.full_name} BMI (${JohnCalcBMI})`)
+// }
+
+// const AntenehArray = [
+//   'Anteneh Alem',
+//   'Texas-Houston',
+//   'java-programmer',
+// ]
+
+// const types = []; //first we create an empty array ..
+// for(let i =0; i< AntenehArray.length; i++){
+//   console.log(AntenehArray[i], typeof AntenehArray[i]);
+
+//   types[i] = typeof AntenehArray[i]; //then we  store on that empty array..
+//   types.push(typeof AntenehArray[i])
+// }
+
+// console.log(types);
