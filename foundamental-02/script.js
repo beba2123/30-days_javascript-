@@ -263,3 +263,19 @@
    
 //  }
 // }
+
+// let rep =1;
+// while(rep <=10){
+//     console.log(`Lifting weight reptition ${rep}`)
+//     rep++;
+// }
+let dice = Math.trunc(Math.random() * 6 + 1);
+let i = 1;
+while(dice !== 6){
+  console.log(`the ${i} throw result ${dice}`);
+    i++;
+  dice = Math.trunc(Math.random() * 6 + 1);
+  if(dice === 6){
+    console.log('oops the dice got 6..')
+  }
+}

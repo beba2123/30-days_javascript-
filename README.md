@@ -159,3 +159,59 @@ eg. const nameOfFriends = ['Abeba', 'Alem', 'Abera'];
     and we want to change on the values inside the array..
     nameOfFriends[2] = abebech;
 	console.log(nameOfFriends) ==>>  ['Abeba', 'Alem', 'Abera'];
+
+  ==>>there are some built in function in the array for example 
+         -->> for adding element in the array we can use push, unshift...
+eg. const friends = ['abeba', 'alem', 'abera'];
+      friends.push('tadessa');==>it will add an element after the last element in the array. ==>['abeba', 'alem', 'abera', 'tadessa'];
+	friends.unshift('tadessa') ==> ['tadessa','abeba', 'alem', 'abera']
+NOTE--> as we said before the push,unshift is built in function so they have to return something  so in push and unshift return length.  const newlength = friends.push('tadessa') 
+ 		console.length(newlength); ==> it will give me the  new length of the array.
+       
+
+         -->>pop, shift both of them use for removing an element inside an array -> pop automatically remove an element whici is the last element inside the array but shift is  used for removing an element that is located at the first index.
+		
+			const friends = ['abeba', 'alem', 'abera'];
+				friends.pop(); ==> it removes abera from the array.
+				friends.shift(); ==> it removes abeba from the array.
+==>> NOTE-> pop and shift are not returning index they return the element that they removed from the indexa and also there are somebuilt in function like "indexOf" for return it index. and 'includes' boolean function used for returning true or false if the function is exist in the array.
+
+NOTE -> include is not type coersion means that it is strict mode. 
+
+===>>> objects 
+--> it is like an array it is used for store a group of value but there are diffrence between an array and an object 
+ 1, they store it as a key and value pair 
+ 2, they use {} instead of [].
+ 3, when we want structured data we use an array but for unstructured one we use object and we call an object based on key name..
+  const PeronalProfile = {
+   First_name : 'Anteneh'
+   Age : 23
+   County : 'biftu'
+   Middle_name : 'Alem'
+ }
+
+-->> inorder  to retrieve data from an  object we can use two method dot and bracket  annotation. the main diffrence between them  we use bracket one for dynamic purpose. for example in prompt function
+		const interestedin =  prompt('please what do you want to know between First_name, Age, County, Middle_name...?')
+		console.log(PersonalProfile[interstedin]) but  we cannot use dot anntation becouse it is not dynamic.
+
+==>> we said that a function is a value so we can create a function inside an object.
+  const PeronalProfile = {
+   First_name : 'Anteneh',
+   Age : 23,
+   birthYear: 1999,
+   County : 'biftu',
+   Middle_name : 'Alem',
+   CalcAge: function(birthyear){ // as we see the functio is paired with the key so there is key value pair.
+	return 2023 - 1999;
+   }
+ }
+
+===>>> Break and continue
+-> when we use a break inside any loop statment it jump out of that loop means that eg.
+            for(int i =0; i< 10; i++){
+	         if( i === 4) break; ==>> means that it is going until it prints out 1,2,3 then the rest of the number will not going to printed.
+		}
+-> when we use the continue one it will not jump out from the loop it only jump  that out-put. eg.
+		for(int i=0;i<10; i++){
+		   if(i==4) continue; output 1,2,3,5,6,7,8,9 -->> it will only jump out the No 4;
+		}
