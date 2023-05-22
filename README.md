@@ -215,3 +215,17 @@ NOTE -> include is not type coersion means that it is strict mode.
 		for(int i=0;i<10; i++){
 		   if(i==4) continue; output 1,2,3,5,6,7,8,9 -->> it will only jump out the No 4;
 		}
+
+
+===>>> DOM(Document object model) monuplation
+==>> it is the strucrured representation of html documents which allows javascript to access html elements and styles to manuplate them(changing the text, html, css) . --> dom is not javascript it is an web-api that can interact with the javascript so we can call 
+it is written in javascript.
+dom represent the html as a tree structure and each html tag has it's node but all the html body is inside the document that  why we start from the document.
+document.queryselector() -->>so inside the quotation we can write the selected html tags like if  it is class we use ."any thing  we want" or if  it is  an id we can write  #'..' 
+-->> if  the html tag is text we use the document.queryselector().textdocument or if the tag is input value we use document.queryselector().value .... 
+
+=> addEventListner()  it is one of the method that attaches an event handler to an element without overwriting existing event handler. ex. document.queryselector('.check').addEventListner('click', function(){
+console.log(document.querySelector('.guess').value);
+ })
+
+Note--> when we want to style we are going to use document.queryselector('body').style.(any css commands we want) = '';
