@@ -9,15 +9,35 @@
 
 // document.querySelector(".guess").value = 23;
 // console.log(document.querySelector(".guess").value);
-const GuessNumber = Math.trunc(Math.random()*20)+1;
-console.log(GuessNumber);
-
+const GuessNumber = Math.trunc(Math.random() * 20) + 1;
+document.querySelector(".number").textContent = GuessNumber;
+let score = 20;
 
 const Eventhandler = function () {
-  const guess = document.querySelector(".guess").value;
-  console.log(guess);
+  const guess = Number(document.querySelector(".guess").value);
+  console.log(guess, typeof guess);
   if (!guess) {
     document.querySelector(".message").textContent = " NO Number ... ";
+  } else if (guess === GuessNumber) {
+    document.querySelector(".message").textContent = "Correct Number.!";
+  } else if (guess > GuessNumber) {
+    if (score < 1) {
+      document.querySelector(".message").textContent = " Too  Higher";
+    score--;
+    document.querySelector(".score").textContent = score;
+    }else {
+        document.querySelector(".message").textContent = " you lost.. ";
+        document.querySelector(".score").textContent = 0;
+    }
+  } else if (guess < GuessNumber) {
+    if (score > 1) {
+      document.querySelector(".message").textContent = " Too LOW";
+    score--;
+    document.querySelector(".score").textContent = score;
+    }else{
+        document.querySelector(".message").textContent = " you lost.. ";
+        document.querySelector(".score").textContent = 0;
+    }
   }
 };
 
