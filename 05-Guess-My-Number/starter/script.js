@@ -23,7 +23,7 @@ const Eventhandler = function () {
       displayMessage('No NUMBER..');
   } else if (guess === GuessNumber) {
     // document.querySelector('.message').textContent = 'Correct Number.!';
-    displayMessage('CORRECT Number..');
+    displayMessage('Correct Number..');
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
     document.querySelector('.number').textContent = GuessNumber; 
@@ -38,7 +38,7 @@ const Eventhandler = function () {
         displayMessage( guess > GuessNumber ? 'Too Higher..' : 'Too Lower..');
         score--;
         document.querySelector('.score').textContent = score;
-      }else if(score < 1){
+      }else{
         // document.querySelector('.message').textcontent = 'You Lost ..';
         displayMessage('You Lost..');
         document.querySelector('.score').textContent = 0;
@@ -65,13 +65,13 @@ const Eventhandler = function () {
   // }
 };
 
-document.querySelector('.check').addEventListener('click', Eventhandler());
+document.querySelector('.check').addEventListener('click', Eventhandler);
 
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   document.querySelector('.score').textContent = score;
   GuessNumber = Math.trunc(Math.random() * 20) + 1;
-  // document.querySelector('.message').textContent = ' Start guessing... ';
+  // document.querySelector('.message').textContent = ' Start guessing... '; 
   displayMessage('Start Guessing..!');
   document.querySelector('.number').textContent = '?';
   document.querySelector('.guess').value = '';
