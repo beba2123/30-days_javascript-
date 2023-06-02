@@ -17,9 +17,18 @@ dicepic.classList.add('hidden');
 let scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
+let playing = true;
+//switching function..
+const switchPlayer = function(){
+    document.getElementById(`current--${activePlayer}`).textContent  = 0;
+    activePlayer = activePlayer === 0 ? 1 : 0;  //switching the players
+    currentScore =0;
+    player0.classList.toggle('player--active'); //which is for changing the ui btn the player 1 and player 0.
+    player1.classList.toggle('player--active');
+}
 //rolling dice function..
-
 btnRoll.addEventListener('click', function(){
+    if(playing){
     //first generate a random no btn 1 to 6..
     const diceNo = Math.trunc(Math.random() * 6) + 1;
         console.log(diceNo)
@@ -34,13 +43,27 @@ btnRoll.addEventListener('click', function(){
         // current_Score.textContent = currentScore;
     }
     else if(diceNo === 1){  // switch the player if it is one.. 
-        document.getElementById(`current--${activePlayer}`).textContent  = 0;
-        activePlayer = activePlayer === 0 ? 1 : 0;  //switching the players
-        currentScore =0;
-        player0.classList.toggle('player--active'); //which is for changing the ui btn the player 1 and player 0.
-        player1.classList.toggle('player--active'); 
+      switchPlayer();
+    }
     }
 })
 btnHold.addEventListener('click', function(){
-    //store a function
+    if(playing){
+    //store a current score at player-1...
+     scores[activePlayer] += currentScore;
+     document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
+
+    //then check it if it is greater than 100;
+    if(scores[activePlayer] >= 10){
+        playing = false;
+        dicepic.classList.remove('hidden');
+        document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
+        document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+    }else{
+
+    //switch the player...
+    switchPlayer();
+    }
+
+   }
 })
