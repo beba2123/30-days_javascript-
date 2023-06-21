@@ -13,22 +13,22 @@ const restaurant = {
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
   order: function(starterIndex, mainIndex){
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  }
+  },
 
-  // openingHours: {
-  //   thu: {
-  //     open: 12,
-  //     close: 22,
-  //   },
-  //   fri: {
-  //     open: 11,
-  //     close: 23,
-  //   },
-  //   sat: {
-  //     open: 0, // Open 24 hours
-  //     close: 24,
-  //   },
-  // },
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
 };
 
 //destructuring array..
@@ -71,3 +71,18 @@ console.log(x, y, a, b);
 const arr2= [1,2,3];
 const[i=1, j=1, k=1, l=1] = arr2;
 console.log(i,j,k,l);
+
+//destructive object..
+const {mainMenu, starterMenu, categories} = restaurant;
+console.log(mainMenu, starterMenu, categories);
+
+//change  the method name on the refrence object 
+const {mainMenu: Menu, starterMenu: Starter, categories: catagory}  = restaurant;
+console.log(Menu, Starter, catagory);
+//mutating variable (lets say there is a variable outside of the refrence object and the variable name outside refrence object are the same as a variable inside the refrence object)
+
+let d = 21;
+let f = 23;
+const obj1 = {d: 12, f: 23};
+({d, f} = obj1);
+console.log(d, f);
