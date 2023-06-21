@@ -14,7 +14,6 @@ const restaurant = {
   order: function(starterIndex, mainIndex){
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
-
   openingHours: {
     thu: {
       open: 12,
@@ -85,4 +84,13 @@ let d = 21;
 let f = 23;
 const obj1 = {d: 12, f: 23};
 ({d, f} = obj1);
-console.log(d, f);
+console.log(d, f); 
+//nested loop.
+const{openingHours} = restaurant;
+console.log(openingHours);
+
+const {fri} = openingHours;
+console.log(fri);
+
+const {fri :{open, close}} = openingHours;
+console.log(open, close);
