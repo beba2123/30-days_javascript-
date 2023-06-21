@@ -39,58 +39,88 @@ const restaurant = {
 
 // const [first, second] = restaurant.starterMenu;
 // console.log(first, second);
-let [first, ,third] = restaurant.categories;
-console.log(first, third);
+// let [first, ,third] = restaurant.categories;
+// console.log(first, third);
 
 
-//we use destructuring for switch variables..
+// //we use destructuring for switch variables..
 
-//the first method ..
-const temp = first;
-first = third;
-third = temp;
-console.log(first, third);
+// //the first method ..
+// const temp = first;
+// first = third;
+// third = temp;
+// console.log(first, third);
 
-//the easiest method for switching variable
+// //the easiest method for switching variable
 
-[first, third] = [third, first];
-console.log(first, third);
+// [first, third] = [third, first];
+// console.log(first, third);
 
-//for recieving two return values from a function
-console.log(restaurant.order(2,2)); //we can use this one it but the output will be an array..
+// //for recieving two return values from a function
+// console.log(restaurant.order(2,2)); //we can use this one it but the output will be an array..
 
-const [startmenu, mains] = restaurant.order(1,0);
-console.log(startmenu, mains)
-//so we can actully use  destructuring method in an array which is located inside another array.. nested destructive.
-const arr = [2, 3, [4, 5]];
-const [x, y, [a,b]] = arr
-console.log(x, y, a, b);
+// const [startmenu, mains] = restaurant.order(1,0);
+// console.log(startmenu, mains)
+// //so we can actully use  destructuring method in an array which is located inside another array.. nested destructive.
+// const arr = [2, 3, [4, 5]];
+// const [x, y, [a,b]] = arr
+// console.log(x, y, a, b);
 
-//we can give a default value for the destructive
-const arr2= [1,2,3];
-const[i=1, j=1, k=1, l=1] = arr2;
-console.log(i,j,k,l);
+// //we can give a default value for the destructive
+// const arr2= [1,2,3];
+// const[i=1, j=1, k=1, l=1] = arr2;
+// console.log(i,j,k,l);
 
-//destructive object..
-const {mainMenu, starterMenu, categories} = restaurant;
-console.log(mainMenu, starterMenu, categories);
+// //destructive object..
+// const {mainMenu, starterMenu, categories} = restaurant;
+// console.log(mainMenu, starterMenu, categories);
 
-//change  the method name on the refrence object 
-const {mainMenu: Menu, starterMenu: Starter, categories: catagory}  = restaurant;
-console.log(Menu, Starter, catagory);
-//mutating variable (lets say there is a variable outside of the refrence object and the variable name outside refrence object are the same as a variable inside the refrence object)
+// //change  the method name on the refrence object 
+// const {mainMenu: Menu, starterMenu: Starter, categories: catagory}  = restaurant;
+// console.log(Menu, Starter, catagory);
+// //mutating variable (lets say there is a variable outside of the refrence object and the variable name outside refrence object are the same as a variable inside the refrence object)
 
-let d = 21;
-let f = 23;
-const obj1 = {d: 12, f: 23};
-({d, f} = obj1);
-console.log(d, f); 
-//nested loop.
-const{openingHours} = restaurant;
-console.log(openingHours);
+// let d = 21;
+// let f = 23;
+// const obj1 = {d: 12, f: 23};
+// ({d, f} = obj1);
+// console.log(d, f); 
+// //nested loop.
+// const{openingHours} = restaurant;
+// console.log(openingHours);
 
-const {fri} = openingHours;
-console.log(fri);
+// const {fri} = openingHours;
+// console.log(fri);
 
-const {fri :{open, close}} = openingHours;
-console.log(open, close);
+// const {fri :{open, close}} = openingHours;
+// console.log(open, close);
+
+
+// //spread array..
+// const array1 = [7, 8, 9];
+// const addarr = [1 ,2 , ...array1];
+
+// console.log(addarr);
+
+// //function opertor  
+// const add = function(a, b, c){
+//    return a + b + c;
+// }
+// const Numbers = [1, 2, 3];
+// // const result = add(...Numbers);
+
+// console.log(add(...Numbers));
+const Menu1 = [...restaurant.mainMenu, restaurant.starterMenu];
+console.log(Menu1);
+
+const str = "Anteneh";
+const strSpread = [...str];
+console.log(strSpread);
+
+const add  = function(a, b, c){
+  return a + b + c;
+}
+
+const Numbers = [1 , 2, 3];
+const result = add(...Numbers);
+console.log(result);
