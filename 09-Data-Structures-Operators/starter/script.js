@@ -28,7 +28,13 @@ const restaurant = {
       close: 24,
     },
   },
+  pizzaIngre: function(ingre1, ingre2, ingre3){
+    return ingre1 + ingre2 + ingre3;
+  }
 };
+
+const [Italian, , Vegetarian, ...otherFood] = [...restaurant.categories, ...restaurant.starterMenu];
+console.log(otherFood);
 
 //destructuring array..
 // const arr = [1,2,3];
@@ -110,17 +116,20 @@ const restaurant = {
 // // const result = add(...Numbers);
 
 // console.log(add(...Numbers));
-const Menu1 = [...restaurant.mainMenu, restaurant.starterMenu];
-console.log(Menu1);
+ const Menu1 = [...restaurant.mainMenu, restaurant.starterMenu];
+ console.log(Menu1);
 
-const str = "Anteneh";
-const strSpread = [...str];
-console.log(strSpread);
+// const str = "Anteneh";
+// const strSpread = [...str];
+// console.log(strSpread);
 
-const add  = function(a, b, c){
-  return a + b + c;
-}
+// const add  = function(a, b, c){
+//   return a + b + c;
+// }
 
-const Numbers = [1 , 2, 3];
-const result = add(...Numbers);
-console.log(result);
+// const Numbers = [1 , 2, 3];
+// const result = add(...Numbers);
+// console.log(result);
+
+// const ingre = [' pasta  ',  ' and ',' selse ']
+// console.log(restaurant.pizzaIngre(...ingre));
