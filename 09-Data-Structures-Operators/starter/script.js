@@ -1,150 +1,219 @@
-'use strict';
+// 'use strict';
 
-// Data needed for a later exercise
-const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+// // Data needed for a later exercise
+// const flights =
+//   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
-// Data needed for first part of the section
-const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  order: function(starterIndex, mainIndex){
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+// // Data needed for first part of the section
+// const restaurant = {
+//   name: 'Classico Italiano',
+//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+//   order: function(starterIndex, mainIndex){
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0, // Open 24 hours
+//       close: 24,
+//     },
+//   },
+//   pizzaIngre: function(ingre1, ingre2, ingre3){
+//     return ingre1 + ingre2 + ingre3;
+//   }
+// };
+
+// // const [Italian, , Vegetarian, ...otherFood] = [...restaurant.categories, ...restaurant.starterMenu];
+// // console.log(otherFood);
+
+// //destructuring array..
+// // const arr = [1,2,3];
+// // const [a,b,c] = arr;
+// // console.log(a,b,c);
+
+// //destructuring from the refrence one..
+
+// // const [first, second] = restaurant.starterMenu;
+// // console.log(first, second);
+// // let [first, ,third] = restaurant.categories;
+// // console.log(first, third);
+
+
+// // //we use destructuring for switch variables..
+
+// // //the first method ..
+// // const temp = first;
+// // first = third;
+// // third = temp;
+// // console.log(first, third);
+
+// // //the easiest method for switching variable
+
+// // [first, third] = [third, first];
+// // console.log(first, third);
+
+// // //for recieving two return values from a function
+// // console.log(restaurant.order(2,2)); //we can use this one it but the output will be an array..
+
+// // const [startmenu, mains] = restaurant.order(1,0);
+// // console.log(startmenu, mains)
+// // //so we can actully use  destructuring method in an array which is located inside another array.. nested destructive.
+// // const arr = [2, 3, [4, 5]];
+// // const [x, y, [a,b]] = arr
+// // console.log(x, y, a, b);
+
+// // //we can give a default value for the destructive
+// // const arr2= [1,2,3];
+// // const[i=1, j=1, k=1, l=1] = arr2;
+// // console.log(i,j,k,l);
+
+// // //destructive object..
+// // const {mainMenu, starterMenu, categories} = restaurant;
+// // console.log(mainMenu, starterMenu, categories);
+
+// // //change  the method name on the refrence object 
+// // const {mainMenu: Menu, starterMenu: Starter, categories: catagory}  = restaurant;
+// // console.log(Menu, Starter, catagory);
+// // //mutating variable (lets say there is a variable outside of the refrence object and the variable name outside refrence object are the same as a variable inside the refrence object)
+
+// // let d = 21;
+// // let f = 23;
+// // const obj1 = {d: 12, f: 23};
+// // ({d, f} = obj1);
+// // console.log(d, f); 
+// // //nested loop.
+// // const{openingHours} = restaurant;
+// // console.log(openingHours);
+
+// // const {fri} = openingHours;
+// // console.log(fri);
+
+// // const {fri :{open, close}} = openingHours;
+// // console.log(open, close);
+
+
+// // //spread array..
+// // const array1 = [7, 8, 9];
+// // const addarr = [1 ,2 , ...array1];
+
+// // console.log(addarr);
+
+// // //function opertor  
+// // const add = function(a, b, c){
+// //    return a + b + c;
+// // }
+// // const Numbers = [1, 2, 3];
+// // // const result = add(...Numbers);
+ 
+// // console.log(add(...Numbers));
+//  const Menu1 = [...restaurant.mainMenu, restaurant.starterMenu];
+//  console.log(Menu1);
+
+// // const str = "Anteneh";
+// // const strSpread = [...str];
+// // console.log(strSpread);
+
+// // const add  = function(a, b, c){
+// //   return a + b + c;
+// // }
+
+// // const Numbers = [1 , 2, 3];
+// // const result = add(...Numbers);
+// // console.log(result);
+
+// // const ingre = [' pasta  ',  ' and ',' selse ']
+// // console.log(restaurant.pizzaIngre(...ingre));
+
+// const{sat, ...rest} = restaurant.openingHours;
+// console.log(rest);
+
+// const add = function (...Numbers){
+//   let sum =0;
+//   for(let i=0; i< Numbers.length; i++){
+//     sum+=Numbers[i];
+//   }
+//   console.log(sum);
+// }
+
+// const x = [2, 3, 4];
+// add(...x);
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
   },
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
-  pizzaIngre: function(ingre1, ingre2, ingre3){
-    return ingre1 + ingre2 + ingre3;
-  }
 };
 
-// const [Italian, , Vegetarian, ...otherFood] = [...restaurant.categories, ...restaurant.starterMenu];
-// console.log(otherFood);
 
-//destructuring array..
-// const arr = [1,2,3];
-// const [a,b,c] = arr;
-// console.log(a,b,c);
+// Number 1
+const[players1, players2] = game.players;
+// console.log(players1, players2);
+// Number the goalkeeper and the rest player.
+// const[goalkeeper, ...restPlayer] = players1;
+// console.log(restPlayer);
+// console.log(goalkeeper);
+// Number 3..->create an array which is named "all player.." of both teams.
+// const allPlayer = [ ...players1, ...players2];
+// console.log(allPlayer);
 
-//destructuring from the refrence one..
+// Number 4 -> create new array that holds additional players inside the original array (bayermunich..)
+// const players1Final = ["Thiago", "coutinho", "Persic", ...players1];
 
-// const [first, second] = restaurant.starterMenu;
-// console.log(first, second);
-// let [first, ,third] = restaurant.categories;
-// console.log(first, third);
+// console.log(players1Final);
 
+//Number 5 -> change the odds name from x to drow
+// const {team1, x: drow, team2} = game.odds;
+// console.log(team1, drow, team2);
 
-// //we use destructuring for switch variables..
-
-// //the first method ..
-// const temp = first;
-// first = third;
-// third = temp;
-// console.log(first, third);
-
-// //the easiest method for switching variable
-
-// [first, third] = [third, first];
-// console.log(first, third);
-
-// //for recieving two return values from a function
-// console.log(restaurant.order(2,2)); //we can use this one it but the output will be an array..
-
-// const [startmenu, mains] = restaurant.order(1,0);
-// console.log(startmenu, mains)
-// //so we can actully use  destructuring method in an array which is located inside another array.. nested destructive.
-// const arr = [2, 3, [4, 5]];
-// const [x, y, [a,b]] = arr
-// console.log(x, y, a, b);
-
-// //we can give a default value for the destructive
-// const arr2= [1,2,3];
-// const[i=1, j=1, k=1, l=1] = arr2;
-// console.log(i,j,k,l);
-
-// //destructive object..
-// const {mainMenu, starterMenu, categories} = restaurant;
-// console.log(mainMenu, starterMenu, categories);
-
-// //change  the method name on the refrence object 
-// const {mainMenu: Menu, starterMenu: Starter, categories: catagory}  = restaurant;
-// console.log(Menu, Starter, catagory);
-// //mutating variable (lets say there is a variable outside of the refrence object and the variable name outside refrence object are the same as a variable inside the refrence object)
-
-// let d = 21;
-// let f = 23;
-// const obj1 = {d: 12, f: 23};
-// ({d, f} = obj1);
-// console.log(d, f); 
-// //nested loop.
-// const{openingHours} = restaurant;
-// console.log(openingHours);
-
-// const {fri} = openingHours;
-// console.log(fri);
-
-// const {fri :{open, close}} = openingHours;
-// console.log(open, close);
-
-
-// //spread array..
-// const array1 = [7, 8, 9];
-// const addarr = [1 ,2 , ...array1];
-
-// console.log(addarr);
-
-// //function opertor  
-// const add = function(a, b, c){
-//    return a + b + c;
+// 
+// const printGoals = function(...players){
+//   console.log(players);
+//   console.log(`${players.length} goals were scored..`);
 // }
-// const Numbers = [1, 2, 3];
-// // const result = add(...Numbers);
- 
-// console.log(add(...Numbers));
- const Menu1 = [...restaurant.mainMenu, restaurant.starterMenu];
- console.log(Menu1);
-
-// const str = "Anteneh";
-// const strSpread = [...str];
-// console.log(strSpread);
-
-// const add  = function(a, b, c){
-//   return a + b + c;
-// }
-
-// const Numbers = [1 , 2, 3];
-// const result = add(...Numbers);
-// console.log(result);
-
-// const ingre = [' pasta  ',  ' and ',' selse ']
-// console.log(restaurant.pizzaIngre(...ingre));
-
-const{sat, ...rest} = restaurant.openingHours;
-console.log(rest);
-
-const add = function (...Numbers){
-  let sum =0;
-  for(let i=0; i< Numbers.length; i++){
-    sum+=Numbers[i];
-  }
-  console.log(sum);
-}
-
-const x = [2, 3, 4];
-add(...x);
-
+// printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels');
+// printGoals(...game.scored);
