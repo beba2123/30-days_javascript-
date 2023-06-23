@@ -33,8 +33,8 @@ const restaurant = {
   }
 };
 
-const [Italian, , Vegetarian, ...otherFood] = [...restaurant.categories, ...restaurant.starterMenu];
-console.log(otherFood);
+// const [Italian, , Vegetarian, ...otherFood] = [...restaurant.categories, ...restaurant.starterMenu];
+// console.log(otherFood);
 
 //destructuring array..
 // const arr = [1,2,3];
@@ -114,7 +114,7 @@ console.log(otherFood);
 // }
 // const Numbers = [1, 2, 3];
 // // const result = add(...Numbers);
-
+ 
 // console.log(add(...Numbers));
  const Menu1 = [...restaurant.mainMenu, restaurant.starterMenu];
  console.log(Menu1);
@@ -133,3 +133,18 @@ console.log(otherFood);
 
 // const ingre = [' pasta  ',  ' and ',' selse ']
 // console.log(restaurant.pizzaIngre(...ingre));
+
+const{sat, ...rest} = restaurant.openingHours;
+console.log(rest);
+
+const add = function (...Numbers){
+  let sum =0;
+  for(let i=0; i< Numbers.length; i++){
+    sum+=Numbers[i];
+  }
+  console.log(sum);
+}
+
+const x = [2, 3, 4];
+add(...x);
+
