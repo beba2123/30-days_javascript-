@@ -271,6 +271,11 @@ const[players1, players2] = game.players;
    const output = team  === 'x' ? 'draw' : `victory ${game[team]}`;
    console.log(`odds of ${output}:${value}`); 
  }
- const mySet = new Set(['anteneh', 'alem', 'resoto', 'alem']);
+ const newSet = ['anteneh', 'alem', 'resoto', 'alem']
+ const mySet = new Set(newSet);
 
  console.log(mySet);
+
+ for(const set of mySet){
+  console.log(set);
+ }
