@@ -342,3 +342,6 @@ const passLower = passenger.toLowerCase();
 console.log(passLower);
 const passengerCorrect = passLower[0].toUpperCase() + passLower.slice(1);
 console.log(passengerCorrect);
+
+const name1 = 'Anteneh Alem Abera Abera';
+console.log(name1.replaceAll('Abera' , ''))
