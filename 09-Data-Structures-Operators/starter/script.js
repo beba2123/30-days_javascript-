@@ -261,21 +261,34 @@ const[players1, players2] = game.players;
 //  for(const [keys, value] of game.scored.entries()){  //
 //   console.log(`Goal ${keys + 1}: ${value}`)
 //  }
-  let sum =0;
- for(const odd of Object.values(game.odds)){
-     sum += odd;
-    // console.log(odd)
- }
- console.log(sum/3); 
- for(const [team, value] of Object.entries(game.odds)){
-   const output = team  === 'x' ? 'draw' : `victory ${game[team]}`;
-   console.log(`odds of ${output}:${value}`); 
- }
- const newSet = ['anteneh', 'alem', 'resoto', 'alem']
- const mySet = new Set(newSet);
+//   let sum =0;
+//  for(const odd of Object.values(game.odds)){
+//      sum += odd;
+//     // console.log(odd)
+//  }
+//  console.log(sum/3); 
+//  for(const [team, value] of Object.entries(game.odds)){
+//    const output = team  === 'x' ? 'draw' : `victory ${game[team]}`;
+//    console.log(`odds of ${output}:${value}`); 
+//  }
+//  const newSet = ['anteneh', 'alem', 'resoto', 'alem']
+//  const mySet = new Set(newSet);
 
- console.log(mySet);
+//  console.log(mySet);
 
- for(const set of mySet){
-  console.log(set);
- }
+//  for(const set of mySet){
+//   console.log(set);
+//  }
+const newMap11 = new Map([
+  ['question', 'what is the best programming language?'], 
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'javaScript'],
+  ['correct', 3],
+  [true, 'correct'],
+  [false, 'try again']
+]);
+console.log(newMap11.get('question'));
+for (const [key, value] of newMap11){
+  if(typeof key === 'number') console.log( `Answer ${key}: ${value}`)
+}
