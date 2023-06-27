@@ -279,16 +279,50 @@ const[players1, players2] = game.players;
 //  for(const set of mySet){
 //   console.log(set);
 //  }
-const newMap11 = new Map([
-  ['question', 'what is the best programming language?'], 
-  [1, 'C'],
-  [2, 'Java'],
-  [3, 'javaScript'],
-  ['correct', 3],
-  [true, 'correct'],
-  [false, 'try again']
+// const newMap11 = new Map([
+//   ['question', 'what is the best programming language?'], 
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'javaScript'],
+//   ['correct', 3],
+//   [true, 'correct'],
+//   [false, 'try again']
+// ]);
+// console.log(newMap11.get('question'));
+// for (const [key, value] of newMap11){
+//   if(typeof key === 'number') console.log( `Answer ${key}: ${value}`)
+// }
+// // const Answer = Number(prompt('Your answer..!'));
+// // console.log([...newMap11]);
+// console.log([...newMap11.values()])
+// const Answer = 3;
+// console.log(Answer);
+// console.log(newMap11.get(Answer === newMap11.get('correct')));
+
+//coding challenge 3
+
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
 ]);
-console.log(newMap11.get('question'));
-for (const [key, value] of newMap11){
-  if(typeof key === 'number') console.log( `Answer ${key}: ${value}`)
+
+// const events  = [...new Set(gameEvents.values())];
+// console.log(events);
+
+// gameEvents.delete(64);
+// console.log(gameEvents);
+// console.log(`an  event happened , every ${90/gameEvents.size} minutes so watch the game carefully otherwise you will miss so many things.`);
+
+for(const [key, value] of gameEvents){
+  const half = key <= 45 ? 'FIRST': 'SECOND'; 
+  console.log(`[${half} Half] ${key}: ${value}`);
 }
