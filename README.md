@@ -229,3 +229,298 @@ console.log(document.querySelector('.guess').value);
  })
 
 Note--> when we want to style we are going to use document.queryselector('body').style.(any css commands we want) = '';
+===>>> Class List -->> is a read-only proprerty that is used to return CSS classes in the form of an array which allow us to remove, add, replace, loggle or check whether the specified CSS is present or not.
+   Eg.  modal.classList.remove('hidden'); class name modal then write the classlist and then write then we are going to write what we are going to do with that CSS class. 
+
+
+==>> Note -> when we want to select an element using their id instead of their class name we use two thing ==>1-> document.queryselector('# then id name');
+document.getelementid('id name no hash tag...')
+
+
+
+===>>> JavaScript  Engine 
+-> javascript engine is built from stack and heap.stack is for excute the source code and a heap is used to store the code.
+==>> compilation and interpretation 
+-> compilation 
+the entire source code is converted into a machine code at once and written to a binary file that can be excuted by a computer.the excution happen way after compilation.
+-> interpretation
+it excute the source code line by line but we have to  know that the code still needs to be converted to a machine code and previous javascript model are interpreted one. but the new version javascript is just in time compilation .
+-> Just In Time Compilation.
+it is the mixed of compilation and interpretation which means that the entire source code is converted into a machine code at once, then excuted immidiately.it doesnot  have  to be away after compilation.
+
+==>> How is just in time compilation works 
+1st it parse means that it reads the source code by using the method called abstract syntax tree(AST) which is used to read like built function like const or function or let...and also used to read an error.
+2nd compilation
+3rd excution
+but between compilation and excution there is a thing which is called runtime optimization which is used to  re-optimize a code paths based on ongoing profiling and feedback. this iterative optimization used to increase the performance.
+
+===>>>JavaScript engine
+-> it is like a container or a box which contians all the neccessary javascript staff init like js-engine, web-api(DOM, TIMERS, CONSOLE.LOG), Callback queue(click, timer, data).
+
+===>>> Excution Context -> after compilation there is another step which is called excution so for the excution there are some steps that has to be followed..
+Steps 1st-> create global  excution context(for top level code)->  which excute everything  other than inside function or method this things have it's own method..
+NOTE-->> Enviroment Context is a piece of javaScript code is excuted.Stores all the necessary information for some code to be excuted.
+Step 2nd -> excute of top level code.
+Step 3rd -> excution of functions and waiting for callbacks. 
+ 
+
+===>>> what is inside the excution context
+-> 1st Variable Enviroment(like let const var function argument)
+-> 2nd Scope Chain
+-> 3rd this keyword
+
+
+THE CALL STACK
+
+-> it is a place where the excution context stacked on top of each other, to keep track of where we are in the excution.javaScript is a single threaded programming language which means that it can only do one thing at a time.
+
+
+
+===>>>Scoping and Scope Concept
+-> Scoping used to tell how our program is organized and accessed. like where do variables live? ...
+-> Lexical Scoping the scoping is controlled by  placement of function and blocks  of code.
+-> Scope is a space or enviroment in which a certain variable is declared or it is like a container or context that holds variables and define their life span and their availabilty. so it helps to organize and manage the variable and functions within the prigram and determine which parts of the code can access or modify them.there are diffrent types of scope global scope, function scope and block scope.
+==>> global scope any varible that is declared out side  of the funtion is called global scope like const me = "Anteneh Alem". Variable declared in global scopes are accessible everywhere.
+==>> Function scope are accessible inside funtion  not outside like function calcAge(birthYear){
+									const now = 2037;
+									const age = now - birthYear;
+									    return age;
+									}
+
+									console.log(now); //refrence error becouse it cannot accessed out side of the funtion.
+
+==>> Block scope is accessible only inside  block(block scoped) however this is only applies to let and const variables.
+
+
+==>> NOTE when we declare variable we can use const or let but cannot use var. eg
+  		const addExpre = function (a,b){
+			return a+b;
+		}; but we cannot use 
+		var addExpre = function (a,b){
+                   return a+b;
+	       }
+===>>> Argument keyword
+-> it is like a keyword refers to an array like an object that is available with in the scope of a function. it contains all the arguments(values) that were passed to the function when it was invoked. the "arguments" allows to access indvidual arguments passed to a function was defined without explicitly declaring named parameters.it provide a way to access and manipulate the arguments dynamically within the function.
+
+function sum() { //here when we delclare function we don't pass any arguments
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) {  
+    total += arguments[i];
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3, 4)); // Output: 10  //so we can write our  own argument and we can access them write..we can push or pop becouse it is store every element as an array.. that we are passing to it 
+
+==>>NOTE -> we cannot  use  var keyword for an arguments when we declare a function..
+
+
+===>>>Data-Structure in javascript.
+=> Destructuring Array -> this is like a process which is used for breakdown complex data-structure to simple one. 
+-> so there are diffrent ways we use destructing arrays like 
+1st -> for selecting an element which is located inside an array.
+
+eg. lets say there is a given reference object 
+  const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  order: function(starterIndex, mainIndex){
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  orderdaily: function(starterindex, mainindex, time, location){
+	console.log(`the order is ${starterMenu[startreindex]} with ${mainMenu[mainindex]} and with time zone of${time} o'clock from ${location}.`);
+     }
+  }
+resturant.orderdaily({
+  starterindex,
+  mainindex,
+  time,
+  location,
+})
+
+let [first, ,third] = restaurant.categories;
+console.log(first, third);
+-> so the out put will be like  ( italian Vegetarian)
+
+2nd -> we use it for switching a value.
+const temp = first;
+first = third;
+third = temp;
+console.log(first, third);
+==>> so the out put  will be  like Vegetarian  italian .
+
+===>>> for recieving two return values from a function
+	->const[startmenu, mains] = restaurant.order()
+so the out put will be like (pizzria foccaci).
+
+==>> we use it for destructing an array when using a nested array.
+const arr = [1, 2, [4, 5]];
+const [x, y, [a, b]] = arr;
+console.log(x, y, a, b);
+
+the out-put will be like 1 2 4 5.
+
+===>>> object destructive lets see an example.
+const {name, starterMenu, mainMenu} = resturant
+console.log(name, starterMenu, mainMenu);
+
+===>>> Spread Operator
+-> it allow's to expand or spread elements from an iterable such as an array  or object into a places where multiple   elements or arguments are expected.
+1st array manipulation(spread operator can be used to combine multiple arrays together in a single array.) 
+    eg.const array1 = [1, 2, 3];
+	const array2 = [...array1]; // Creates a shallow copy of array1
+	const combinedArray = [...array1, 4, 5]; // Combines multiple arrays into a single array
+
+2nd used to pass an array of arguments to a function as individual arguments.
+   eg. function sum(a, b, c) {
+  	return a + b + c;
+	}
+
+ 	const numbers = [1, 2, 3];
+	const result = sum(...numbers); // Passes array elements as individual arguments
+
+
+3rd for creat shallow copies of objects or merge multiple objects into single objects.
+    const object1 = {foo: 1, bar: 2};
+    const object2 = {baz: 3};
+    const mergeobject = {...object1, ...object2};
+    
+4th it is used for capturing multiple arguments into array like structure known as rest parameters.
+      function sum(...numbers) {
+ 	 let total = 0;
+  	for (let number of numbers) {
+   		 total += number;
+ 	 }
+ 	 return total;
+	}
+
+	const result = sum(1, 2, 3, 4, 5); // Captures multiple arguments into an array
+5th it used within array or  object destructuring to assign the remaining elements or properties to a new variable.
+   	==>>  in the destructuring arrays.	
+		const numbers = [1, 2, 3, 4, 5];
+		const [first, second, ...rest] = numbers; // Destructures the array and assigns remaining elements to 'rest'.
+      ==>> in the destructuring objects.
+		const object = { a: 1, b: 2, c: 3, d: 4 };
+		const { a, b, ...rest } = object; // Destructures the object and assigns remaining properties to 'rest'
+
+
+==>> we also used it  on a string. like lets for example const str = "Anteneh";
+							 const SprString = [...str];
+							 console.log(SprString);
+
+
+
+Rest Pattern and Parameter
+==>> pattern used in array to capture the remaining elements into a new array. it uses the rest syntax followed by a variable to represent the remaing elements.
+
+		const [first, second, ...rest] = [1, 2, 3, 4, 5];
+		console.log(first); // Output: 1
+		console.log(second); // Output: 2
+		console.log(rest); // Output: [3, 4, 5]
+==>> the parameter is used in function declarations to represent an indefnite numbers of arguments as an array like structure.it allows you to pass any numbers of arguments to a function and they will be gathered into an array.
+
+const add = function(..Numbers){
+   let sum =0;
+   for(let i=0; i<Numbers.length;i++){
+       sum+=Numbers[i];	
+    } 	
+    console.log(sum);
+   }
+const x = [23, 32, 23];
+add(...x);
+
+Note ==>>  the rest pattern is used in array destructuring, while the rest parameter is used in function declarations.
+
+
+===>>> Short Circuiting.
+-> before defining the short circuiting lets see first about operator and operator uses any data type and also it return any data type and also it short-circuiting.
+-> console.log(3 || 'janos') -> output will be 3 becouse in or operator there is a rule which said that if it find the truth value first it will out put it first and last he will not see other value in it.
+console.log('' || 'jonas') -> output jonas.
+--> so basically the 'OR' operator return the the first truthy value that it's found or the last value if all the  value inside it  is false.
+--> so basically the 'AND' operator return true if all the value are true other wise it  become short circuited  the rest of the other value after it and it will return the first falsy value.
+
+==>> Nullish Coelescing function.
+-> that provides a concise way to handle default values when dealing with null or undefined values.it print out it's right hand side otherwise if the left hand side expression is any other falsy value(empty string, zero or false) it return the left hand side. 
+eg.   const name = null;
+	const defaultName = 'John Doe';
+	const finalName = name ?? defaultName;
+
+	console.log(finalName); //since the name is null value it jumps it finds jhon doe so jhon doe is not a null value so the out put will be jhno doe.==>> Output: 'John Doe'
+
+
+===>>> optional chaining
+-> it is used for accessing th properties and method of an  object without having to explicitly check for the existence of intermidiate properties. it helps to simplify  the process of accessing nested object  and their properties when dealing  with undefined or null values.
+-> it syntax is the question mark(?)placed before '.'  operator.
+
+const person = {
+  name: 'John',
+  address: {
+    street: '123 Main St',
+    city: 'Exampleville',
+    country: 'USA'
+  }
+};
+
+// Without optional chaining
+const country = person.address.country; // Accessing nested property
+
+// With optional chaining
+const country = person.address?.country; // Accessing nested property with optional chaining
+
+console.log(country); // Output: 'USA'
+
+const person = {
+  name: 'John',
+  sayHello: function() {
+    console.log('Hello!');
+  }
+};
+
+// Without optional chaining
+person.sayHello(); // Output: 'Hello!'
+
+// With optional chaining
+person.sayHello?.(); // Output: 'Hello!'
+
+=> Optional chaining is especially useful when working with complex data structures, APIs, or when dealing with data that might not always be present. It simplifies code by reducing the need for explicit null or undefined checks, making it more concise and readable.
+
+===>>> Looping objects_keys,  values, and entries
+Note -> mostly we use them for iterate an object inside another object..remember!!
+-> used to for iterate keys which is inside the object.
+ const keys = Objects.keys(person);
+console.log(keys); -->> print out -> name and sayHello(function name.)
+->inorder  also to print  values.
+ const values = Objects.values(person);
+ console.log(values); -->> prints out like John, Hello!.
+===>>> sets 
+->is a built object that allows you to store unique values of any type.it provides a collection of unique elements and ensures that each element appears only once in the set. set is neccesary when you want to work without duplicate and when the other order of the elements isnot important.
+  -->>when creating a new set.  const mySet = new set();
+   -> to know the size of set mySet.size
+   -> to add an element mySet.add('any thing you want to add.');
+   -> to know whether the element is there or not mySet.has('');
+   -> to delete an element mySet.delete('the value we want to delete');
+++>Note -> in set we cannot retrieve data.
+
+==>> Map
+->it is similar to an object but with a few key diffrence,  it allows you to store key-value pair but the key can be any of type  and also it is iteratable but the object is not inorder to do that we use like object.key, object.entiries(), object.values....
+ const newMap = new Map();
+->so in map we can add element using newMap.set(key, value);
+->to retrieve the data we can use newMap.get(key);
+->to check the size of the Map newMap.size;
+->to check the value newMap.has(key);
+->to delete the value inside the Map newMap.delete(key);
+
+
+===>>> when and where to use an Arrays vs Sets And objects vs maps
+  Array  															Sets
+=> Arrays an we use it for when we need ordered list of values(might contain duplicates) 	 =>used when you need to work with unique values.
+=> when we want to maipulate data.								 =>used when we need high performance is really important 
+   										                 =>use to remove duplicates from arrays
+ Objects															MAPS			
+=>more 'traditional' key/value store								 =>better performance
+=>Easier to write and access values with . and []						 =>easier to iterate
+=>we use it when we need to include functions(methods)						 => easy to compute size
+=> use when working with JSON									 =>keys can have any data type
+												 =>key can have any data type.

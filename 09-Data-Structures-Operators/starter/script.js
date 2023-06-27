@@ -326,3 +326,19 @@ for(const [key, value] of gameEvents){
   const half = key <= 45 ? 'FIRST': 'SECOND'; 
   console.log(`[${half} Half] ${key}: ${value}`);
 }
+
+const checkMiddleSeat = function(seat){
+const lastSpellling = seat.slice(-1);
+// if(lastSpellling === 'B' ||  lastSpellling ===  'E') {
+//   console.log('middle seat');
+// }else 
+//   console.log('not middle seat');
+ lastSpellling === 'B' || lastSpellling === 'C' ?  console.log('middle seat') :  console.log('not middle seat');
+}
+checkMiddleSeat('11c');
+
+const passenger =  'joNAS';
+const passLower = passenger.toLowerCase();
+console.log(passLower);
+const passengerCorrect = passLower[0].toUpperCase() + passLower.slice(1);
+console.log(passengerCorrect);
